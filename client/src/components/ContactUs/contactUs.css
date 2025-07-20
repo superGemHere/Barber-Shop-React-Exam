@@ -1,8 +1,8 @@
-@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;300;400;500;600;700&display=swap');
 
 .contact-us {
   width: 100%;
-  height: 93vh;
+  min-height: 93vh;
   display: flex;
   flex-direction: column;
   background: linear-gradient(
@@ -13,135 +13,322 @@
   );
   justify-content: center;
   align-items: center;
+  padding: 2rem 1rem;
 }
 
 .content {
-  width: 90%;
-  height: 80%;
+  width: 100%;
+  max-width: 1200px;
+  min-height: 80vh;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  background-color: rgb(255, 255, 255, .2);
+  background-color: rgba(255, 255, 255, 0.15);
+  border-radius: 15px;
+  padding: 2rem;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
 }
 
 .containerContact {
-  width: 400px;
-  height: 20px;
-  margin: 0;
-  padding: 30px;
-  background: #2e2c2c;
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto 2rem auto;
+  padding: 2rem;
+  background: rgba(46, 44, 44, 0.8);
   display: flex;
   justify-content: center;
   align-items: center;
-  position: relative;
-  top: -65px;
+  border-radius: 15px;
+  backdrop-filter: blur(10px);
 }
 
 .msg {
   font-family: 'Raleway', sans-serif;
-  font-size: 60px;
+  font-size: 3rem;
   font-weight: bold;
   background: linear-gradient(to right, rgb(252, 251, 251), rgb(131, 130, 130));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  max-width: 350px;
-  /* text-transform: uppercase; */
-  line-height: .77;
+  background-clip: text;
+  line-height: 1.2;
+  text-align: center;
 }
 
 .parent {
   display: flex;
-  align-items: center;
-  justify-content: space-around;
+  align-items: stretch;
+  justify-content: center;
   flex-direction: column;
   width: 100%;
-  /* flex-wrap: wrap; */
+  gap: 2rem;
 }
 
 .contacts {
-  width: 70%;
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-weight: bold;
-  background-color: rgb(44, 40, 40, 0.5);
-  margin: 10px;
-  border-radius: 30px 30px 0 0;
-  position: relative;
-  top: -15px;
-
+  padding: 2rem;
+  background-color: rgba(44, 40, 40, 0.7);
+  border-radius: 15px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
 }
+
 .contactText {
-  font-size: 40px;
-  background-color: rgba(233, 227, 227, 0.5);
-  position: relative;
-  top: -30px;
+  font-size: 1.5rem;
+  color: #fff;
+  text-align: center;
+  font-weight: 600;
+  background-color: rgba(233, 227, 227, 0.1);
+  padding: 1rem 2rem;
+  border-radius: 10px;
+  margin-bottom: 1rem;
 }
 
 .secondaryInfo {
-  width: 70%;
+  width: 100%;
   display: flex;
-  align-items: center;
-  justify-content: space-between;
+  align-items: stretch;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
 }
 
 .social-media {
-  height: 300px;
-  width: 500px;
+  min-height: 250px;
+  flex: 1;
+  min-width: 280px;
+  max-width: 400px;
   display: flex;
   align-items: center;
   color: #fff;
   justify-content: center;
   flex-direction: column;
-  border-radius: 0 0 0 30px;
-  background-color: rgba(26, 24, 24, 0.7);
+  border-radius: 15px;
+  background-color: rgba(26, 24, 24, 0.8);
+  backdrop-filter: blur(10px);
+  padding: 2rem;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease;
+}
+
+.social-media:hover {
+  transform: translateY(-5px);
+}
+
+.social-media h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
 }
 
 .social-media-links {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  height: 90px;
-  width: 120px;
-  font-size: 80px;
-  font-weight: bold;
-  position: relative;
-  top: -30px;
-  border-radius: 100px;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.social-media-links a {
+  color: #fff;
+  font-size: 2rem;
+  padding: 1rem;
+  border-radius: 50%;
+  background-color: rgba(70, 180, 194, 0.2);
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.social-media-links a:hover {
+  background-color: rgb(70, 180, 194);
+  transform: scale(1.1);
 }
 
 .location {
-  height: 300px;
-  width: 500px;
+  min-height: 250px;
+  flex: 1;
+  min-width: 280px;
+  max-width: 400px;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  background-color: rgba(26, 24, 24, 0.7);
-  border-radius: 0 0 30px 0;
+  background-color: rgba(26, 24, 24, 0.8);
+  border-radius: 15px;
   color: #fff;
+  padding: 2rem;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease;
 }
+
+.location:hover {
+  transform: translateY(-5px);
+}
+
 .location h2 {
-  position: relative;
-  top: -60px;
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
 }
 
 .google-maps {
   display: flex;
   text-align: center;
   justify-content: center;
-  height: 90px;
-  width: 400px;
-  font-size: 20px;
-  font-weight: bolder;
-  position: relative;
-  top: -85px;
+  align-items: center;
+  width: 100%;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.6;
+  color: #fff;
 }
 
-.number{
-  font-family: 'Agbalumo';
-  font-size: 30px;
+.number {
+  font-family: 'Agbalumo', cursive;
+  font-size: 1.3rem;
+  color: rgb(70, 180, 194);
+  font-weight: bold;
+  margin: 0.5rem 0;
+}
+
+/* Mobile Responsiveness */
+@media screen and (max-width: 768px) {
+  .contact-us {
+    padding: 1rem 0.5rem;
+  }
+  
+  .content {
+    padding: 1.5rem;
+  }
+  
+  .containerContact {
+    max-width: 400px;
+    padding: 1.5rem;
+  }
+  
+  .msg {
+    font-size: 2.2rem;
+  }
+  
+  .parent {
+    gap: 1.5rem;
+  }
+  
+  .contacts {
+    padding: 1.5rem;
+  }
+  
+  .contactText {
+    font-size: 1.3rem;
+    padding: 0.8rem 1.5rem;
+  }
+  
+  .secondaryInfo {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  
+  .social-media,
+  .location {
+    min-width: 100%;
+    max-width: 100%;
+    min-height: 200px;
+    padding: 1.5rem;
+  }
+  
+  .social-media h2,
+  .location h2 {
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+  }
+  
+  .social-media-links a {
+    font-size: 1.8rem;
+    padding: 0.8rem;
+  }
+  
+  .number {
+    font-size: 1.2rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .contact-us {
+    padding: 0.5rem 0.25rem;
+  }
+  
+  .content {
+    padding: 1rem;
+  }
+  
+  .containerContact {
+    max-width: 320px;
+    padding: 1rem;
+  }
+  
+  .msg {
+    font-size: 1.8rem;
+  }
+  
+  .contacts {
+    padding: 1rem;
+  }
+  
+  .contactText {
+    font-size: 1.1rem;
+    padding: 0.6rem 1rem;
+  }
+  
+  .social-media,
+  .location {
+    padding: 1rem;
+  }
+  
+  .social-media h2,
+  .location h2 {
+    font-size: 1.2rem;
+  }
+  
+  .social-media-links a {
+    font-size: 1.5rem;
+    padding: 0.6rem;
+  }
+  
+  .google-maps {
+    font-size: 0.9rem;
+  }
+  
+  .number {
+    font-size: 1.1rem;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .containerContact {
+    max-width: 280px;
+  }
+  
+  .msg {
+    font-size: 1.5rem;
+  }
+  
+  .contactText {
+    font-size: 1rem;
+  }
+  
+  .social-media-links a {
+    font-size: 1.3rem;
+    padding: 0.5rem;
+  }
+  
+  .number {
+    font-size: 1rem;
+  }
 }
 

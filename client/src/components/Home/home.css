@@ -2,12 +2,13 @@
 
 #home {
   margin: 0;
-  padding: 0;
-  height: 93vh;
+  padding: 1rem;
+  min-height: 93vh;
   background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)),
     url(https://wallpapers.com/images/hd/barber-shop-background-c8pq8le29lkcb64m.jpg);
-  background-size: 100%;
+  background-size: cover;
   background-position: center;
+  background-attachment: fixed;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -21,13 +22,19 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  text-align: center;
+  width: 100%;
+  max-width: 800px;
 }
 
 .intro h1 {
   text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
 }
 
-.home-buttons{
+.home-buttons {
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -36,28 +43,94 @@
   color: #fff;
 }
 
-.home-button-links{
+.home-button-links {
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 1rem;
 }
 
-.buttons{
-  border: 3px solid rgb(255, 2555, 255, 0.2);
+.buttons {
+  border: 3px solid rgba(255, 255, 255, 0.3);
   text-decoration: none;
-  width: 20%;
-  padding: 5px;
-  margin: 10px;
+  min-width: 160px;
+  padding: 0.8rem 1.5rem;
+  margin: 0.5rem;
   text-align: center;
   color: #fff;
   background-color: transparent;
-  transition: 2s;
-
-
+  transition: all 0.3s ease;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 500;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
-.buttons:hover{
+
+.buttons:hover {
   background-color: rgb(70, 180, 194);
+  border-color: rgb(70, 180, 194);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(70, 180, 194, 0.4);
+}
+
+/* Mobile Responsiveness */
+@media screen and (max-width: 768px) {
+  #home {
+    padding: 0.5rem;
+    background-attachment: scroll;
+  }
+  
+  .intro h1 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .home-button-links {
+    flex-direction: column;
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto;
+  }
+  
+  .buttons {
+    width: 100%;
+    max-width: 250px;
+    margin: 0.5rem 0;
+    padding: 1rem 1.5rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  #home {
+    padding: 0.25rem;
+  }
+  
+  .intro h1 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+  }
+  
+  .buttons {
+    font-size: 0.9rem;
+    padding: 0.8rem 1.2rem;
+    min-width: 140px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .intro h1 {
+    font-size: 1.5rem;
+  }
+  
+  .buttons {
+    font-size: 0.85rem;
+    padding: 0.7rem 1rem;
+    min-width: 120px;
+  }
 }
 /* .buttons:hover::after{
   background-color: peachpuff;

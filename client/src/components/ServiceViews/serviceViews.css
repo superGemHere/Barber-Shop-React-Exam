@@ -179,3 +179,157 @@
           from {background-position: 0%;}
           to {background-position: 100%;}
   }
+  
+  @keyframes barberpole {
+          from {background-position: 0%;}
+          to {background-position: 100%;}
+  }
+
+/* Mobile Responsive Styles */
+
+/* Mobile devices (320px - 480px) */
+@media screen and (max-width: 480px) {
+  .servicePriceList {
+    min-height: 100vh;
+    padding: 20px 0;
+  }
+
+  .servicePriceList > h1 {
+    font-size: 1.5rem;
+    margin: 10px 0;
+    text-align: center;
+    padding: 0 20px;
+  }
+
+  .haircutServiceParent {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .servicePriceListInsides {
+    width: 95%;
+    left: 0;
+    position: static;
+    padding: 0 10px;
+  }
+
+  .typeInsides {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    min-height: 80px;
+    margin: 8px 0;
+    padding: 15px 10px;
+    font-size: 0.9rem;
+  }
+
+  .typeInsides-SecondChild {
+    font-size: 0.85rem;
+    top: -20px;
+  }
+
+  /* Hide barber poles on mobile for better performance and space */
+  .barberContainer1,
+  .barberContainer2 {
+    display: none;
+  }
+}
+
+/* Tablet devices (481px - 768px) */
+@media screen and (min-width: 481px) and (max-width: 768px) {
+  .servicePriceList > h1 {
+    font-size: 1.8rem;
+    margin: 15px 0;
+  }
+
+  .servicePriceListInsides {
+    width: 90%;
+    left: 0;
+    position: static;
+  }
+
+  .typeInsides {
+    width: 90%;
+    max-width: 400px;
+    height: auto;
+    min-height: 90px;
+    margin: 10px 0;
+    padding: 15px;
+  }
+
+  .typeInsides-SecondChild {
+    font-size: 0.95rem;
+    top: -25px;
+  }
+
+  /* Adjust barber poles for tablet */
+  .barberContainer1 {
+    left: 5%;
+    width: 60px;
+    height: 220px;
+  }
+
+  .barberContainer2 {
+    right: 2.5%;
+    width: 60px;
+    height: 220px;
+  }
+
+  .ball1, .ball2 {
+    width: 16px;
+    height: 16px;
+    margin-left: 22px;
+    margin-right: 22px;
+  }
+
+  .endCap1, .endCap2 {
+    width: 38px;
+    margin-left: 11px;
+    margin-right: 11px;
+  }
+
+  .cap1, .cap2 {
+    width: 60px;
+  }
+
+  .barberWrap1, .barberWrap2 {
+    width: 38px;
+    height: 124px;
+    margin-left: 11px;
+    margin-right: 11px;
+  }
+
+  .barber1, .barber2 {
+    width: 38px;
+    height: 124px;
+    background-size: 19px 19px;
+  }
+}
+
+/* Small desktop/large tablet (769px - 1024px) */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  .servicePriceListInsides {
+    width: 85%;
+    left: 40px;
+  }
+
+  .typeInsides {
+    width: 80%;
+    max-width: 450px;
+  }
+
+  .barberContainer1 {
+    left: 8%;
+  }
+
+  .barberContainer2 {
+    right: 5%;
+  }
+}
+
+/* Large desktop adjustments (1025px+) */
+@media screen and (min-width: 1025px) {
+  .servicePriceListInsides {
+    left: 70px;
+  }
+}

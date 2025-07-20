@@ -1,106 +1,217 @@
-.products{
+.products {
     width: 100%;
     min-height: 93vh;
     max-height: fit-content;
     display: flex;
     justify-content: center;
     background-color: black;
-    /* background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(12, 10, 10, 0.8)),
-      url(https://wallpapers.com/images/hd/barber-shop-background-c8pq8le29lkcb64m.jpg);
-    background-size: 100%;
-    background-position: center; */
-    background-attachment: scroll;  
-  }
-  
-  .productsParentContainer{
+    padding: 2rem 1rem;
+}
+
+.productsParentContainer {
     width: 100%;
+    max-width: 1200px;
     min-height: 93vh;
     max-height: fit-content;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     text-align: center;
-    margin: 50px;
-    margin-top: 100px;
-  }
-  
-  #productsHeading{
-    height: fit-content;
-    position: relative;
-    top: 5px;
-    font-size: 60px;
-    font-weight: bolder;
-    color: #fff;
-    text-shadow: 3px 3px grey;
-    font-family: Arial, Helvetica, sans-serif;
-    text-transform: uppercase;
-    /* left: 860px; */
-  }
-  
-  .productChildContainer{
-    width: 100%;
-    /* border: 10px solid white;z */
-    height: 100%;
-  display: flex;
-  position: relative;
-  bottom: 20px;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-  /* border: 5px solid rgba(255, 255, 255, 0.15); */
-  border-radius: 20px;
-  }
-  .productChildContainer::-webkit-scrollbar{
-  display: none;
-  }
-  
-  .productChildContainer img{
-    
-  width: 200px;
-  height: 200px;
-  background-size: 100%;
-  }
-  
-  
-  .productCard{
-    margin: 10px;
-    padding: 20px;
-  width: 250px;
-  height: fit-content;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  border: 5px solid rgba(255, 255, 255, 0.4);
-  border-radius: 10px;
-  border-style:outset;
-  background-color: black;
-  transition: 100ms;
-  }
+    padding-top: 2rem;
+}
 
-  .productCard:hover{
-    scale: 1.05;
-  }
-  
-  .insideCard{
-    font-size: 25px;
-  }
-  
-  #detailsBtn{
+#productsHeading {
+    height: fit-content;
+    font-size: 3rem;
+    font-weight: bold;
+    color: #fff;
+    text-shadow: 3px 3px rgba(128, 128, 128, 0.8);
+    font-family: 'Raleway', Arial, Helvetica, sans-serif;
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.productChildContainer {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+    justify-content: center;
+    gap: 2rem;
+    padding: 1rem 0;
+}
+
+.productChildContainer::-webkit-scrollbar {
+    display: none;
+}
+
+.productChildContainer img {
+    width: 100%;
+    max-width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.productCard {
+    margin: 0;
+    padding: 1.5rem;
+    width: 280px;
+    max-width: 100%;
+    min-height: 350px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    border: 3px solid rgba(255, 255, 255, 0.3);
+    border-radius: 15px;
+    background-color: rgba(0, 0, 0, 0.8);
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+.productCard:hover {
+    transform: translateY(-8px) scale(1.02);
+    border-color: rgba(70, 180, 194, 0.6);
+    box-shadow: 0 12px 35px rgba(70, 180, 194, 0.3);
+}
+
+.insideCard {
+    font-size: 1.2rem;
+    color: #fff;
+    text-align: center;
+    margin: 1rem 0;
+    line-height: 1.5;
+}
+
+#detailsBtn {
     color: #131313;
     background-color: #fff;
-    border-radius: 10px;
-    font-size: 22px;
-    font-weight: bolder;
-    padding: 10px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 0.8rem 1.5rem;
     text-decoration: none;
-  }
-  #detailsBtn:hover{
+    transition: all 0.3s ease;
+    margin-top: auto;
+}
+
+#detailsBtn:hover {
     color: #fff;
-    background-color: rgb(6, 136, 136);
-  }
-  
-  .zeroProducts{
+    background-color: rgb(70, 180, 194);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(70, 180, 194, 0.4);
+}
+
+.zeroProducts {
     color: #fff;
-  }
+    font-size: 1.3rem;
+    text-align: center;
+    margin-top: 3rem;
+    padding: 2rem;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+}
+
+/* Mobile Responsiveness */
+@media screen and (max-width: 768px) {
+    .products {
+        padding: 1rem 0.5rem;
+    }
+    
+    #productsHeading {
+        font-size: 2.2rem;
+        margin-bottom: 1.5rem;
+    }
+    
+    .productChildContainer {
+        gap: 1.5rem;
+    }
+    
+    .productCard {
+        width: 250px;
+        min-height: 320px;
+        padding: 1.2rem;
+    }
+    
+    .productChildContainer img {
+        height: 180px;
+    }
+    
+    .insideCard {
+        font-size: 1.1rem;
+    }
+    
+    #detailsBtn {
+        font-size: 0.9rem;
+        padding: 0.7rem 1.2rem;
+    }
+}
+
+@media screen and (max-width: 580px) {
+    .products {
+        padding: 1rem 0.25rem;
+    }
+    
+    #productsHeading {
+        font-size: 1.8rem;
+        margin-bottom: 1rem;
+    }
+    
+    .productChildContainer {
+        gap: 1rem;
+        justify-content: center;
+    }
+    
+    .productCard {
+        width: 90%;
+        max-width: 300px;
+        min-height: 280px;
+        padding: 1rem;
+    }
+    
+    .productChildContainer img {
+        height: 150px;
+    }
+    
+    .insideCard {
+        font-size: 1rem;
+        margin: 0.8rem 0;
+    }
+    
+    #detailsBtn {
+        font-size: 0.85rem;
+        padding: 0.6rem 1rem;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    #productsHeading {
+        font-size: 1.5rem;
+    }
+    
+    .productCard {
+        width: 95%;
+        min-height: 260px;
+        padding: 0.8rem;
+    }
+    
+    .productChildContainer img {
+        height: 130px;
+    }
+    
+    .insideCard {
+        font-size: 0.9rem;
+    }
+    
+    #detailsBtn {
+        font-size: 0.8rem;
+        padding: 0.5rem 0.8rem;
+    }
+}

@@ -1,35 +1,84 @@
-footer{
+footer {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    height: 10vh;
+    min-height: 10vh;
+    padding: 1rem;
     color: #fff;
     background-color: #131313;
-    font-size: 15px;
+    font-size: 0.9rem;
 }
 
-.links{
+.links {
     display: flex;
     flex-direction: row;
     justify-content: center;
     width: 100%;
     align-items: center;
-    
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 1rem;
 }
-.links a{
+
+.links a {
     color: #fff;
     text-decoration: none;
+    padding: 0.5rem;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
 }
 
-/* .aboutUs-div a{
-    color: #fff;
-} */
-
-.links > div{
-    margin: 0 5px 0 5px;
+.links a:hover {
+    background-color: rgba(255, 255, 255, 0.1);
 }
 
-.copyright p{
-    font-size: 12px;
+.links > div {
+    margin: 0.25rem;
+}
+
+.copyright p {
+    font-size: 0.75rem;
+    text-align: center;
+    margin: 0;
+    opacity: 0.8;
+}
+
+/* Mobile Responsiveness */
+@media screen and (max-width: 768px) {
+    footer {
+        padding: 1.5rem 1rem;
+        font-size: 0.85rem;
+    }
+    
+    .links {
+        flex-direction: column;
+        gap: 0.5rem;
+        text-align: center;
+    }
+    
+    .links > div {
+        margin: 0.2rem 0;
+    }
+    
+    .copyright p {
+        font-size: 0.7rem;
+        margin-top: 1rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    footer {
+        padding: 1rem 0.5rem;
+        font-size: 0.8rem;
+    }
+    
+    .links a {
+        padding: 0.4rem;
+        font-size: 0.8rem;
+    }
+    
+    .copyright p {
+        font-size: 0.65rem;
+    }
 }
